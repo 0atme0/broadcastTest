@@ -11,12 +11,13 @@
 
 @interface ChatViewController : UIViewController <AsyncBroadcasterDelegate>
 
+@property (strong,nonatomic,readwrite) NSString* nick;
 @property (strong) AsyncBroadcaster *broadcaster;
-@property (weak, nonatomic) IBOutlet UITextView *chatText;
 @property (weak, nonatomic) IBOutlet UITextField *sendText;
 - (IBAction)sendAction:(UIButton *)sender;
 - (IBAction)keyboardHide:(id)sender;
 - (IBAction)endTapp:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *chatText;
 
 @end
 

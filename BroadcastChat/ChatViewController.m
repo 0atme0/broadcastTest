@@ -9,6 +9,9 @@
 #import "ChatViewController.h"
 
 @interface ChatViewController ()
+{
+
+}
 
 @end
 
@@ -17,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+
     // Create and configure the broadcaster
     self.broadcaster = [AsyncBroadcaster new];
     self.broadcaster.port = 50001;
@@ -25,26 +29,32 @@
     
     // start the broadcaster
     [self.broadcaster start];
-    
 
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)sendAction:(UIButton *)sender {
     
     // get and encode the message from the text field
     NSString *message = self.sendText.text;
-    NSData *encodedMessage = [message dataUsingEncoding:NSUTF8StringEncoding];
     
-    // broadcast the encoded message
-    [self.broadcaster broadcast:encodedMessage];
+    NSDictionary *jsonObject = @{@"nick": self.nick,
+                                 @"message":message};
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonObject options:NSJSONWritingPrettyPrinted error:nil];
+
+ 
+    // broadcast message
+    [self.broadcaster broadcast:jsonData];
     
     // log
-    self.chatText.text = [self.chatText.text stringByAppendingFormat:@">> %@\n", message];
+    self.chatText.text = [self.chatText.text stringByAppendingFormat:@"%@>> %@\n", self.nick, message];
+
     
     // clear the input text field
     self.sendText.text = @"";
@@ -67,9 +77,18 @@
 
 - (void)broadcaster:(AsyncBroadcaster *)theBroadcaster didReceiveData:(NSData *)data fromHost:(NSString *)host;
 {
-    // decode and display the message
-    NSString *message = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    self.chatText.text = [self.chatText.text stringByAppendingFormat:@"<< [%@:%ld] %@\n", host, theBroadcaster.port, message];
+
+    
+    NSDictionary *parsedJSONObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+
+    if ([[parsedJSONObject objectForKey:@"nick"] isEqualToString:@""]) {
+        
+            self.chatText.text = [self.chatText.text stringByAppendingFormat:@"<< [%@] %@\n",host,[parsedJSONObject objectForKey:@"message"]];
+    }  else {
+            self.chatText.text = [self.chatText.text stringByAppendingFormat:@"<< [%@] %@\n",[parsedJSONObject objectForKey:@"nick"],[parsedJSONObject objectForKey:@"message"]];
+    }
+
+
 }
 
 - (void)broadcaster:(AsyncBroadcaster *)theBroadcaster didFailWithError:(NSError *)error;

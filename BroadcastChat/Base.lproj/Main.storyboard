@@ -1,11 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="h4Z-io-6JD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Pre Load View Controller-->
+        <scene sceneID="gNL-KC-lfR">
+            <objects>
+                <viewController id="h4Z-io-6JD" customClass="PreLoadViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hIf-pR-YxS"/>
+                        <viewControllerLayoutGuide type="bottom" id="cUt-k3-eZF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fD0-ib-LuT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your nickname ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y7Y-SB-hRm">
+                                <rect key="frame" x="252" y="111" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Broadcast chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUh-6q-HmK">
+                                <rect key="frame" x="195" y="28" width="211" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDS-WI-74b">
+                                <rect key="frame" x="274" y="200" width="53" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Choose"/>
+                                <connections>
+                                    <action selector="nickAction:" destination="h4Z-io-6JD" eventType="touchUpInside" id="dau-UE-MAD"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="nickSegue" id="vO7-Jo-lhE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gUh-6q-HmK" firstAttribute="leading" secondItem="fD0-ib-LuT" secondAttribute="leadingMargin" constant="50" id="6hT-Rz-nye"/>
+                            <constraint firstItem="y7Y-SB-hRm" firstAttribute="top" secondItem="gUh-6q-HmK" secondAttribute="bottom" constant="60" id="94I-hB-cou"/>
+                            <constraint firstItem="y7Y-SB-hRm" firstAttribute="leading" secondItem="fD0-ib-LuT" secondAttribute="leadingMargin" constant="10" id="CKB-Sw-IfA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y7Y-SB-hRm" secondAttribute="trailing" constant="10" id="CdG-cu-Lja"/>
+                            <constraint firstItem="zDS-WI-74b" firstAttribute="leading" secondItem="fD0-ib-LuT" secondAttribute="leadingMargin" constant="10" id="CiJ-2A-Onx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gUh-6q-HmK" secondAttribute="trailing" constant="50" id="Va6-xU-7I8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zDS-WI-74b" secondAttribute="trailing" constant="10" id="sIK-yh-e09"/>
+                            <constraint firstItem="zDS-WI-74b" firstAttribute="top" secondItem="y7Y-SB-hRm" secondAttribute="bottom" constant="60" id="wkk-Dj-mCk"/>
+                            <constraint firstItem="gUh-6q-HmK" firstAttribute="top" secondItem="hIf-pR-YxS" secondAttribute="bottom" constant="60" id="wyX-fs-Aby"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nickText" destination="y7Y-SB-hRm" id="uCx-bm-wkc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z76-iW-Xr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-439" y="361"/>
+        </scene>
         <!--Chat View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,13 +72,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssp-i6-6EH">
-                                <rect key="frame" x="47" y="451" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7hw-RF-6oI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7hw-RF-6oI">
                                 <rect key="frame" x="47" y="30" width="97" height="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -44,26 +92,32 @@
                                     <action selector="sendAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9j5-DK-hvX"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNK-jJ-ZJN">
+                                <rect key="frame" x="73" y="296" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="7hw-RF-6oI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="DYB-ON-xfm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ssp-i6-6EH" secondAttribute="bottom" constant="10" id="InP-Mg-VPB"/>
                             <constraint firstItem="7hw-RF-6oI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="MAD-gk-7M7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ssp-i6-6EH" secondAttribute="trailing" constant="10" id="Mj1-ic-ahw"/>
+                            <constraint firstItem="BNK-jJ-ZJN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Slp-AR-qmK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gF3-4L-9aQ" secondAttribute="trailing" constant="10" id="UHk-8r-GlZ"/>
-                            <constraint firstItem="ssp-i6-6EH" firstAttribute="top" secondItem="7hw-RF-6oI" secondAttribute="bottom" constant="10" id="UYb-9A-dA1"/>
-                            <constraint firstItem="ssp-i6-6EH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="WJu-hP-9ne"/>
                             <constraint firstItem="gF3-4L-9aQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="YIH-x0-O4I"/>
                             <constraint firstItem="gF3-4L-9aQ" firstAttribute="leading" secondItem="7hw-RF-6oI" secondAttribute="trailing" constant="10" id="f5v-NY-SMx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BNK-jJ-ZJN" secondAttribute="bottom" constant="20" id="lMz-jU-0eE"/>
+                            <constraint firstItem="BNK-jJ-ZJN" firstAttribute="top" secondItem="7hw-RF-6oI" secondAttribute="bottom" constant="20" id="lOO-9Z-bLv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BNK-jJ-ZJN" secondAttribute="trailing" constant="20" id="tGb-D7-whm"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="yD0-KS-vnw" appends="YES" id="iUu-qZ-1OI"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="chatText" destination="ssp-i6-6EH" id="bnj-qL-840"/>
+                        <outlet property="chatText" destination="BNK-jJ-ZJN" id="Tw0-wj-bEW"/>
                         <outlet property="sendText" destination="7hw-RF-6oI" id="x8C-wf-dVF"/>
                     </connections>
                 </viewController>

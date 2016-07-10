@@ -14,6 +14,7 @@
 		E319212B1D31D69100A080EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31921291D31D69100A080EE /* Main.storyboard */; };
 		E319212D1D31D69100A080EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E319212C1D31D69100A080EE /* Assets.xcassets */; };
 		E31921301D31D69100A080EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E319212E1D31D69100A080EE /* LaunchScreen.storyboard */; };
+		E31921391D32899000A080EE /* PreLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E31921381D32899000A080EE /* PreLoadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		E319212C1D31D69100A080EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E319212F1D31D69100A080EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E31921311D31D69100A080EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E31921371D32899000A080EE /* PreLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreLoadViewController.h; sourceTree = "<group>"; };
+		E31921381D32899000A080EE /* PreLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreLoadViewController.m; sourceTree = "<group>"; };
 		ED7DF6E6A769C4E1326C8DCD /* Pods-BroadcastChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroadcastChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-BroadcastChat/Pods-BroadcastChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +90,8 @@
 				E31921261D31D69100A080EE /* ChatViewController.h */,
 				E31921271D31D69100A080EE /* ChatViewController.m */,
 				E31921291D31D69100A080EE /* Main.storyboard */,
+				E31921371D32899000A080EE /* PreLoadViewController.h */,
+				E31921381D32899000A080EE /* PreLoadViewController.m */,
 				E319212C1D31D69100A080EE /* Assets.xcassets */,
 				E319212E1D31D69100A080EE /* LaunchScreen.storyboard */,
 				E31921311D31D69100A080EE /* Info.plist */,
@@ -225,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31921391D32899000A080EE /* PreLoadViewController.m in Sources */,
 				E31921281D31D69100A080EE /* ChatViewController.m in Sources */,
 				E31921251D31D69100A080EE /* AppDelegate.m in Sources */,
 				E31921221D31D69100A080EE /* main.m in Sources */,
