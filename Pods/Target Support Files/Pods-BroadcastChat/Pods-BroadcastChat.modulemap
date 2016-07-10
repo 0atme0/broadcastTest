@@ -1,0 +1,6 @@
+framework module Pods_BroadcastChat {
+  umbrella header "Pods-BroadcastChat-umbrella.h"
+
+  export *
+  module * { export * }
+}

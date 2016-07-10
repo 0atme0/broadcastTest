@@ -7,25 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7AC6AC02E4031E8BDAD94EF /* Pods_BroadcastChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA3FAEE93701A5897E073C4 /* Pods_BroadcastChat.framework */; };
 		E31921221D31D69100A080EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E31921211D31D69100A080EE /* main.m */; };
 		E31921251D31D69100A080EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E31921241D31D69100A080EE /* AppDelegate.m */; };
-		E31921281D31D69100A080EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E31921271D31D69100A080EE /* ViewController.m */; };
+		E31921281D31D69100A080EE /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E31921271D31D69100A080EE /* ChatViewController.m */; };
 		E319212B1D31D69100A080EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31921291D31D69100A080EE /* Main.storyboard */; };
 		E319212D1D31D69100A080EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E319212C1D31D69100A080EE /* Assets.xcassets */; };
 		E31921301D31D69100A080EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E319212E1D31D69100A080EE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DA3FAEE93701A5897E073C4 /* Pods_BroadcastChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BroadcastChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DD740B3E45C69FE457EA619 /* Pods-BroadcastChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroadcastChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BroadcastChat/Pods-BroadcastChat.debug.xcconfig"; sourceTree = "<group>"; };
 		E319211D1D31D69100A080EE /* BroadcastChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BroadcastChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31921211D31D69100A080EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E31921231D31D69100A080EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E31921241D31D69100A080EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E31921261D31D69100A080EE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E31921271D31D69100A080EE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E31921261D31D69100A080EE /* ChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		E31921271D31D69100A080EE /* ChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
 		E319212A1D31D69100A080EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E319212C1D31D69100A080EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E319212F1D31D69100A080EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E31921311D31D69100A080EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED7DF6E6A769C4E1326C8DCD /* Pods-BroadcastChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroadcastChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-BroadcastChat/Pods-BroadcastChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7AC6AC02E4031E8BDAD94EF /* Pods_BroadcastChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5847EBA5191F64986C097F3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DA3FAEE93701A5897E073C4 /* Pods_BroadcastChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A02E17BCE9D47103C9FD97CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DD740B3E45C69FE457EA619 /* Pods-BroadcastChat.debug.xcconfig */,
+				ED7DF6E6A769C4E1326C8DCD /* Pods-BroadcastChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E31921141D31D69100A080EE = {
 			isa = PBXGroup;
 			children = (
 				E319211F1D31D69100A080EE /* BroadcastChat */,
 				E319211E1D31D69100A080EE /* Products */,
+				A02E17BCE9D47103C9FD97CC /* Pods */,
+				5847EBA5191F64986C097F3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +84,8 @@
 			children = (
 				E31921231D31D69100A080EE /* AppDelegate.h */,
 				E31921241D31D69100A080EE /* AppDelegate.m */,
-				E31921261D31D69100A080EE /* ViewController.h */,
-				E31921271D31D69100A080EE /* ViewController.m */,
+				E31921261D31D69100A080EE /* ChatViewController.h */,
+				E31921271D31D69100A080EE /* ChatViewController.m */,
 				E31921291D31D69100A080EE /* Main.storyboard */,
 				E319212C1D31D69100A080EE /* Assets.xcassets */,
 				E319212E1D31D69100A080EE /* LaunchScreen.storyboard */,
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E31921341D31D69100A080EE /* Build configuration list for PBXNativeTarget "BroadcastChat" */;
 			buildPhases = (
+				75D228CF23172D60B2057DFA /* 📦 Check Pods Manifest.lock */,
 				E31921191D31D69100A080EE /* Sources */,
 				E319211A1D31D69100A080EE /* Frameworks */,
 				E319211B1D31D69100A080EE /* Resources */,
+				9802F6F3809F29E749F19DD2 /* 📦 Embed Pods Frameworks */,
+				F8E87D62CF0702F6D43CFD24 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,6 +137,7 @@
 				TargetAttributes = {
 					E319211C1D31D69100A080EE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 598SD24BP7;
 					};
 				};
 			};
@@ -144,12 +172,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		75D228CF23172D60B2057DFA /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9802F6F3809F29E749F19DD2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BroadcastChat/Pods-BroadcastChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8E87D62CF0702F6D43CFD24 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BroadcastChat/Pods-BroadcastChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E31921191D31D69100A080EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E31921281D31D69100A080EE /* ViewController.m in Sources */,
+				E31921281D31D69100A080EE /* ChatViewController.m in Sources */,
 				E31921251D31D69100A080EE /* AppDelegate.m in Sources */,
 				E31921221D31D69100A080EE /* main.m in Sources */,
 			);
@@ -263,23 +339,31 @@
 		};
 		E31921351D31D69100A080EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DD740B3E45C69FE457EA619 /* Pods-BroadcastChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BroadcastChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = A.BroadcastChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		E31921361D31D69100A080EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED7DF6E6A769C4E1326C8DCD /* Pods-BroadcastChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BroadcastChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = A.BroadcastChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -302,6 +386,7 @@
 				E31921361D31D69100A080EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,21 @@
+PODS:
+  - AsyncNetwork (1.1.1):
+    - CocoaAsyncSocket
+  - CocoaAsyncSocket (7.4.3):
+    - CocoaAsyncSocket/All (= 7.4.3)
+  - CocoaAsyncSocket/All (7.4.3):
+    - CocoaAsyncSocket/GCD
+    - CocoaAsyncSocket/RunLoop
+  - CocoaAsyncSocket/GCD (7.4.3)
+  - CocoaAsyncSocket/RunLoop (7.4.3)
+
+DEPENDENCIES:
+  - AsyncNetwork (~> 1.1)
+
+SPEC CHECKSUMS:
+  AsyncNetwork: 277af45668cc5e41ecaf8dbd0c953ffad3375982
+  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
+
+PODFILE CHECKSUM: 9e7cf6a8e9300e85172cec29b03b74a8da75e43d
+
+COCOAPODS: 1.0.0
